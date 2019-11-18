@@ -15,8 +15,12 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Include stylesheet -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
   <meta name="theme-color" content="#fafafa">
 </head>
+
 
 <body>
   <!--[if IE]>
@@ -25,23 +29,35 @@
   <div class="flex-container">
     <header class="flex-container">
       <h2>Mock Interview</h2>
-      <button id="start-togetherjs">Start Sharing</button>
+      <p id="timer">45:00</p>
+      <button id="start-togetherjs" type="button" >Start Sharing</button>
     </header>
     <section class="flex-container">
       <div class="left">
-      <h3>Your Question</h3>
-      <textarea id="question"></textarea>
-      <div class="buttons">
-          <button class="btn" data-textArea="question">Clear</button>
+        <h3>Your Question</h3>
+        <!-- Create the editor container -->
+        <div id="question-editor">
+          <p>Enter the question here</p>
+        </div>
       </div>
-    </div>
+
       <div class="right">
-      <h3>Code Editor</h3>
-      <textarea id="code-editor"></textarea>
-      <div class="buttons">
-        <button class="btn" data-textArea="code-editor">Clear</button>
+        <div class="heading flex-container">
+          <h3>Code Editor</h3>
+            <select class="editor-lang">
+              <option value="java">Java</option>
+              <option value="python">Python</option>
+              <option value="javascript">JavaScript</option>
+            </select>
+        </div>
+        <div id="code-editor">
+          public class Solution {
+            public static void main(String[] args) {
+              // type your solution here
+            }
+          }
+        </div>
       </div>
-    </div>
     </section>
     <footer></footer>
   </div>
@@ -51,7 +67,14 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <!-- Include togetherjs library -->
   <script src="https://togetherjs.com/togetherjs-min.js"></script>
+  <!-- Include the Quill library -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <!-- Include the ace code editor for web library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js" integrity="sha256-CVkji/u32aj2TeC+D13f7scFSIfphw2pmu4LaKWMSY8=" crossorigin="anonymous"></script>
+
+
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <!-- <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
