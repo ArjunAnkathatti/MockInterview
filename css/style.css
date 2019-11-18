@@ -7,10 +7,6 @@ body {
     flex-flow: column;
 }
 
-#togetherjs-dock {
-    top: 90% !important;
-}
-
 header.flex-container {
     flex: 1;
     flex-flow: row;
@@ -61,52 +57,35 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .flex-container {
-    display: flex;
-    flex-flow: column;
 }
 
 header.flex-container {
-    flex: 1;
-    flex-flow: row;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #000;
-} 
+}
+ 
 header h2 {
-    flex: 1;
-    margin: 0;
 }
 
 header button {
     flex: 1 100px 0;
-    align-items: flex-end;
-    display: block;
-    padding: 10px 20px;
 }
 
 section.flex-container {
-    flex: 1;
     flex-flow: row;
 } 
 
 section h3 {
-    margin: 0;
-    padding: 10px 0;
 }
 
 section .left {
-    flex: 1;
     margin-right: 50px;
 }
 
 section .right {
-    flex: 1;
 }
 
 section textarea {
-    width: 100%;
-    min-height: 200px;
 }
 
 footer {
