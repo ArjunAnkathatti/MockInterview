@@ -8,6 +8,19 @@ $(document).ready(function() {
     editor.setTheme("ace/theme/monokai");
     editor.session.setMode("ace/mode/java");
 
+    window.Split(['#pane-text-editor', '#pane-code-editor'], {
+        minSize: [400, 400],
+        elementStyle: function(dimension, size, gutterSize) {
+            return {
+                'flex-basis': 'calc(' + size + '% - ' + gutterSize + 'px)',
+            }
+        },
+        gutterStyle: function(dimension, gutterSize) {
+            return {
+                'flex-basis': gutterSize + 'px',
+            }
+        }
+    });
     
     $("#start-togetherjs").click(function() {
         if ($(this).text() === 'Start Sharing') {

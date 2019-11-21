@@ -46,10 +46,22 @@ section h3 {
 
 section .left {
     flex: 1;
+    height: 80vh;
 }
+
+.ql-toolbar.ql-snow {
+    height: 5% !important;
+    min-height: 40px !important;
+}
+
+.ql-container {
+    height: 95% !important;
+}
+
 
 section .right {
     flex: 1;
+    height: 80vh;
 }
 
 .heading.flex-container {
@@ -68,7 +80,7 @@ footer {
 #code-editor {
     display: block;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -77,7 +89,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
 body {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -89,10 +101,6 @@ section.flex-container {
     flex-flow: row;
 } 
 
-section .left {
-    margin-right: 50px;
-}
-
 section .right {
     display: relative;
 }
@@ -100,5 +108,41 @@ section .right {
 footer {
     flex: 1;
 }
+}
+
+.split, .gutter.gutter-horizontal {
+    float: left;
+}
+.gutter.gutter-horizontal {
+    cursor: ew-resize;
+    position: relative;
+    color: #debebe;
+    background: #debebe;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 400, from(#debebe), to(#fff));
+}
+
+.gutter.gutter-horizontal:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: #ed8989;
+    border-radius: 50%;
+    border:1px solid #ed8989;
+}
+.gutter.gutter-horizontal:before {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: #ed8989;
+    border-radius: 50%;
+    border:1px solid #ed8989;
 }
 

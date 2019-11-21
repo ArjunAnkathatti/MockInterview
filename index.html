@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- Split.js library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.11/split.min.js"></script> 
+  
   <!-- Include stylesheet -->
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
@@ -33,7 +35,7 @@
       <button id="start-togetherjs" type="button" >Start Sharing</button>
     </header>
     <section class="flex-container">
-      <div class="left">
+      <div class="left" id="pane-text-editor">
         <h3>Your Question</h3>
         <!-- Create the editor container -->
         <div id="question-editor">
@@ -41,7 +43,7 @@
         </div>
       </div>
 
-      <div class="right">
+      <div class="right" id="pane-code-editor">
         <div class="heading flex-container">
           <h3>Code Editor</h3>
             <select class="editor-lang">
@@ -68,11 +70,13 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <!-- Include togetherjs library -->
-  <script src="https://togetherjs.com/togetherjs-min.js"></script>
+  <!-- <script src="https://togetherjs.com/togetherjs-min.js"></script> -->
   <!-- Include the Quill library -->
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
   <!-- Include the ace code editor for web library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js" integrity="sha256-CVkji/u32aj2TeC+D13f7scFSIfphw2pmu4LaKWMSY8=" crossorigin="anonymous"></script>
+  
+
 
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
